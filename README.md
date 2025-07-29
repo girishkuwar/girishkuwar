@@ -6,7 +6,7 @@
 
 - 💻 I break and build stuff using **MERN**, **Three.js**, and **Chart.js**  
 - 📈 Making Excel files cry in 3D  
-- 🚀 Deploying chaos with Render & Netlify  
+- 🚀 Deploying chaos with Render & Netlify or Vercel
 - 🔁 Committing like: `final_final_really_final_v5.js`
 
 ## 🛠️ Stack Overflow in Human Form
