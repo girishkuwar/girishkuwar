@@ -5,7 +5,6 @@
 ## 🧠 About Me
 
 - 💻 I break and build stuff using **MERN**, **Three.js**, and **Chart.js**  
-- 📈 Making Excel files cry in 3D  
 - 🚀 Deploying chaos with Render & Netlify or Vercel
 - 🔁 Committing like: `final_final_really_final_v5.js`
 
@@ -15,5 +14,5 @@
 const stack = {
   frontend: ["React", "Tailwind", "Chart.js"],
   backend: ["Node.js", "Express", "MongoDB"],
-  extras: ["Three.js", "Excel JS", "JWT", "Vite"]
+  extras: ["Three.js", "Photoshop", "Vite" , "Figma" , "illustrator" ]
 };
