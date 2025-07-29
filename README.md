@@ -1,16 +1,19 @@
-## Hi there 👋
+# 👋 Hey there, I'm Girish Kuwar
 
-<!--
-**girishkuwar/girishkuwar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+![Typing GIF](https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=2500&pause=1000&color=52B5DF&width=435&lines=Full-stack+Dev+%F0%9F%94%A5;Debugging+my+life+one+line+at+a+time)
 
-Here are some ideas to get you started:
+## 🧠 About Me
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- 💻 I break and build stuff using **MERN**, **Three.js**, and **Chart.js**  
+- 📈 Making Excel files cry in 3D  
+- 🚀 Deploying chaos with Render & Netlify  
+- 🔁 Committing like: `final_final_really_final_v5.js`
+
+## 🛠️ Stack Overflow in Human Form
+
+```js
+const stack = {
+  frontend: ["React", "Tailwind", "Chart.js"],
+  backend: ["Node.js", "Express", "MongoDB"],
+  extras: ["Three.js", "Excel JS", "JWT", "Vite"]
+};
