@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chart Selector with Icons</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: 'Roboto', sans-serif;
+      color: #202124;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h3, h4 {
+      margin-bottom: 10px;
+      color: #202124;
+      font-weight: 500;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .option-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .option {
+      flex: 1 1 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      border: 1px solid #dadce0;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #202124;
+      cursor: pointer;
+      transition: background 0.2s ease, box-shadow 0.2s ease;
+      user-select: none;
+      text-align: center;
+    }
+
+    .option .material-icons {
+      font-size: 36px;
+      margin-bottom: 8px;
+      color: #5f6368;
+    }
+
+    .option:hover {
+      background: #f1f3f4;
+    }
+
+    .option.selected {
+      background: #e8f0fe;
+      border-color: #4285f4;
+      color: #174ea6;
+      font-weight: 500;
+    }
+
+    .option.selected .material-icons {
+      color: #174ea6;
+    }
+
+    .chart-options {
+      display: none;
+      margin-top: 15px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h3>Select Chart Dimension</h3>
+    <div class="option-group" id="chartTypeGroup">
+      <div class="option" data-value="2d" onclick="selectOption(this, 'chartType')">
+        <span class="material-icons">view_agenda</span>
+        2D Chart
+      </div>
+      <div class="option" data-value="3d" onclick="selectOption(this, 'chartType')">
+        <span class="material-icons">view_in_ar</span>
+        3D Chart
+      </div>
+    </div>
+  </div>
+
+  <div id="2d-options" class="chart-options section">
+    <h4>Select a 2D Chart</h4>
+    <div class="option-group" id="chart2dGroup">
+      <div class="option" onclick="selectOption(this, 'chartOption')">
+        <span class="material-icons">show_chart</span>
+        Line Chart
+      </div>
+      <div class="option" onclick="selectOption(this, 'chartOption')">
+        <span class="material-icons">bar_chart</span>
+        Bar Chart
+      </div>
+      <div class="option" onclick="selectOption(this, 'chartOption')">
+        <span class="material-icons">pie_chart</span>
+        Pie Chart
+      </div>
+    </div>
+  </div>
+
+  <div id="3d-options" class="chart-options section">
+    <h4>Select a 3D Chart</h4>
+    <div class="option-group" id="chart3dGroup">
+      <div class="option" onclick="selectOption(this, 'chartOption')">
+        <span class="material-icons">view_column</span>
+        3D Column
+      </div>
+      <div class="option" onclick="selectOption(this, 'chartOption')">
+        <span class="material-icons">donut_large</span>
+        3D Pie
+      </div>
+      <div class="option" onclick="selectOption(this, 'chartOption')">
+        <span class="material-icons">terrain</span>
+        3D Surface
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const state = {
+      chartType: null,
+      chartOption: null,
+&& 
+
+    function selectOption(element, type) {
+      const group = element.parentElement;
+      group.querySelectorAll('.option').forEach(el => el.classList.remove('selected'));
+      element.classList.add('selected');
+
+      const value = element.dataset.value || element.textContent.trim();
+      state[type] = value;
+
+      if (type === 'chartType') {
+        document.getElementById('2d-options').style.display = value === '2d' ? 'block' : 'none';
+        document.getElementById('3d-options').style.display = value === '3d' ? 'block' : 'none';
+
+        // Clear previous chartOption selections
+        document.querySelectorAll('#chart2dGroup .option, #chart3dGroup .option').forEach(el => el.classList.remove('selected'));
+        state.chartOption = null;
+      }
+
+      console.log("Selected:", state);
+    }
+  </script>
+
+</body>
+</html>
